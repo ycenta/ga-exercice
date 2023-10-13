@@ -1,7 +1,15 @@
 name: Events exercices
 
 on:
-  workflow_dispatch:
+  push:
+    branches:
+      - 'dev'
+      - 'feat/**'
+    branches-ignore:
+      - 'staging'
+    paths:
+      - '**.ts'
+      - 'joke-app/'
 
 jobs:
   print-event:
