@@ -1,0 +1,22 @@
+name: Push & PR Workflow
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    types:
+      - opened
+
+jobs:
+  push_job:
+    runs-on: ubuntu-latest
+    if: github.event_name == 'push
+    steps: #blabla
+
+
+jobs:
+  pr_job:
+    runs-on: ubuntu-latest
+    if: github.event_name == 'push || github.event_name == 'pull_request'
+    steps: #blabla
